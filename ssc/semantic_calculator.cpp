@@ -150,8 +150,8 @@ void SemanticCalculator::normalize(std::vector<std::string>& keywords)
         std::string word = keywords[i];
 
         if (!wordnet_.in_wn(word.c_str(), ALL_POS)) {
-            for (int i = 1; i <= 4; ++i) {
-                const char* morph = wordnet_.morphword(word.c_str(), i);
+            for (int j = 1; j <= 4; ++j) {
+                const char* morph = wordnet_.morphword(word.c_str(), j);
                 if (morph) {
                     keywords[i] = morph;
                     break;
