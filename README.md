@@ -1,6 +1,6 @@
 # [Open Source Node.js Addon] Semantic Similarity Calculator
 
-* GPL v2.0
+* MIT license
 * Thread-Safe
 * Distance metric between two sets of words
 * Distance metric between two sentences
