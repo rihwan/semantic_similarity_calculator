@@ -1,3 +1,5 @@
+// This is modified version of original wordnet source from https://wordnet.princeton.edu/
+// Modified by Innfarn Yoo (rihwan@gmail.com)
 #ifndef __SAFE_WORDNET_DEFINES_H__
 #define __SAFE_WORDNET_DEFINES_H__
 

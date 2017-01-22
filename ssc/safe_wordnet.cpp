@@ -1,3 +1,5 @@
+// This is modified version of original wordnet source from https://wordnet.princeton.edu/
+// Modified by Innfarn Yoo (rihwan@gmail.com)
 #include "stdafx.h"
 #include "safe_wordnet.h"
 
