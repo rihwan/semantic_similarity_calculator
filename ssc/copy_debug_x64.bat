@@ -1,1 +1,0 @@
-copy ..\x64\Debug\ssc.node ..\..\..\server\addons\ssc\
