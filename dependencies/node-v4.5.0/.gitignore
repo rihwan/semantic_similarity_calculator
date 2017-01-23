@@ -1,0 +1,2 @@
+* # Exclude all files
+!README.md # Except README.md file
