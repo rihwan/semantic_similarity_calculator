@@ -23,20 +23,17 @@
 #ifndef __SEMANTIC_CALCULATOR_H__
 #define __SEMANTIC_CALCULATOR_H__
 
-#include "wordnet_extended.h"
-#include "sentence_similarity.h"
+#include "safe_wordnet.h"
 
 class SemanticCalculator
-    : public WordnetExtended
 {
 public:
     typedef SemanticCalculator my_type;
 
 private:
-    SentenceSimilarityLi2006* sentenceSimilarity_;
+    SafeWordNet wordnet_;
 
     double weightPerfectMatch_;
-    double weightSentenceMatch_;
 
 private:
     SemanticCalculator(const my_type&);
@@ -48,7 +45,7 @@ private:
     void getSynsets(const std::string& word, std::vector<std::string>& synsets);
 
 public:
-    SemanticCalculator(int freq_dict_res_id);
+    SemanticCalculator();
     virtual ~SemanticCalculator();
 
     bool openDB();

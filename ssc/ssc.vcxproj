@@ -97,12 +97,10 @@
     <ClCompile Include="res_file_manager.cpp" />
     <ClCompile Include="safe_wordnet.cpp" />
     <ClCompile Include="semantic_calculator.cpp" />
-    <ClCompile Include="sentence_similarity.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="wordnet_extended.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory_file.h" />
@@ -114,9 +112,7 @@
     <ClInclude Include="safe_wordnet_defines.h" />
     <ClInclude Include="safe_wordnet_structs.h" />
     <ClInclude Include="semantic_calculator.h" />
-    <ClInclude Include="sentence_similarity.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="wordnet_extended.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />

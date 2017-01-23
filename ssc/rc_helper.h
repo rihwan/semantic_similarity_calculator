@@ -32,7 +32,6 @@ static const char* RES_FILENAMES[] = {
     "data.adv",
     "data.noun",
     "data.verb",
-    "freq.txt",
     "index.adj",
     "index.adv",
     "index.noun",

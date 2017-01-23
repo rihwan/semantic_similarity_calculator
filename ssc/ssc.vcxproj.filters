@@ -23,12 +23,6 @@
     <ClCompile Include="dll_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sentence_similarity.cpp">
-      <Filter>WordNet</Filter>
-    </ClCompile>
-    <ClCompile Include="wordnet_extended.cpp">
-      <Filter>WordNet</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -57,12 +51,6 @@
     </ClInclude>
     <ClInclude Include="rc_helper.h">
       <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sentence_similarity.h">
-      <Filter>WordNet</Filter>
-    </ClInclude>
-    <ClInclude Include="wordnet_extended.h">
-      <Filter>WordNet</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>

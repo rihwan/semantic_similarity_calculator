@@ -76,7 +76,7 @@ namespace ssc {
             // We probably need to load database from resource!
             // Local file access failed.
             assert(nullptr == g_SemanticCalculator);
-            g_SemanticCalculator = new SemanticCalculator(IDR_FILE_freq_txt);
+            g_SemanticCalculator = new SemanticCalculator();
 
             // This is only used for clearing at exit hooking
             g_SCForClear.push_back(g_SemanticCalculator);
@@ -102,7 +102,7 @@ namespace ssc {
     {
         // Tricky! Be careful.
         // Adding all resource files
-        assert((sizeof(RES_FILENAMES) / sizeof(const char*)) == 121 - 103 + 1);
+        assert((sizeof(RES_FILENAMES) / sizeof(const char*)) == 120 - 103 + 1);
         for (int i = 103; i <= 121; ++i) {
             g_ResFileManager.addResId(i, RES_FILENAMES[i - 103]);
         }

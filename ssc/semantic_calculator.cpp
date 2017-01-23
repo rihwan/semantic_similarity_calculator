@@ -23,11 +23,8 @@
 #include "stdafx.h"
 #include "semantic_calculator.h"
 
-SemanticCalculator::SemanticCalculator(int freq_dict_res_id)
-    : WordnetExtended(freq_dict_res_id)
-    , sentenceSimilarity_(nullptr)
-    , weightPerfectMatch_(0.5)
-    , weightSentenceMatch_(0.5)
+SemanticCalculator::SemanticCalculator()
+    : weightPerfectMatch_(1.0)
 {
 }
 
@@ -48,18 +45,11 @@ bool SemanticCalculator::openDB()
         std::cout << "Tried to reopen wordnet files" << std::endl;
     }
 
-    if (!sentenceSimilarity_) {
-        sentenceSimilarity_ = new SentenceSimilarityLi2006((*this));
-    }
-
     return true;
 }
 
 void SemanticCalculator::closeDB()
 {
-    delete sentenceSimilarity_;
-    sentenceSimilarity_ = nullptr;
-
     if (wordnet_.getOpenDB()) {
         wordnet_.closefps();
     } else {
@@ -137,10 +127,7 @@ double SemanticCalculator::calcSemanticSimilarity(
         }
     }
 
-    WordnetExtended::UndirectedGraph g;
-    double similarity_sentence_match = sentenceSimilarity_->compute_similarity(src_keywords, dst_keywords, g);
-
-    return ((similarity_perfect_match*weightPerfectMatch_) + (similarity_sentence_match*weightSentenceMatch_));
+    return (similarity_perfect_match*weightPerfectMatch_);
 }
 
 void SemanticCalculator::normalize(std::vector<std::string>& keywords)
