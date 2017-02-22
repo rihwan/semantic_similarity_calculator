@@ -1,4 +1,4 @@
-# [Open Source Node.js Addon] Semantic Similarity Calculator
+# [Open Source Node.js Addon] Semantic Similarity Calculator (used in DoAnim.com)
 
 <b>Features:</b>
 * MIT license
